@@ -26,10 +26,6 @@ By following the video tutorials and building this app on your own you will lear
 5. [Weather Struct](https://www.youtube.com/watch?v=dZqrhbfRvhc&index=5&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). The app needs a way to pass the weather data around. A struct works well for this.
 6. [OpenWeatherMap](https://www.youtube.com/watch?v=YPFrQkZpIKw&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=6). Take a quick tour of the openweathermap.org site, and look at their API. 
 7. [Authorizing the app for HTTP](https://www.youtube.com/watch?v=AoYTuhWZFqM&index=7&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Here we set the security options to allow the app to access HTTP data from OpenWeatherMap. 
-8. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=8&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
-9. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=9&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
-10. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=10&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
-
 
 
 
