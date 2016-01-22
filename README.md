@@ -22,7 +22,7 @@ By following the video tutorials and building this app on your own you will lear
 1. [Create a new project and setup storyboard](https://www.youtube.com/watch?v=VSDMxdsYHq8&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk) - Here you will create a project and add labels, and add some constraints fit the elements to the view. Then create IBOulets and IBActions for elements created in storyboard. 
 2. [Create an Alert action to input cityname](https://www.youtube.com/watch?v=jiSirqZIy5k&index=2&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). An alert controller (UIAlertController) displays a popup dialog box. In this video we add a text field and some buttons to this to allow the input of a city name. 
 3. [Add a textfield to the alert controller](https://www.youtube.com/watch?v=Ia-eztihAYU&index=3&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
-4. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=4&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
+4. [Video description](https://www.youtube.com/watch?v=mKMNi7vSZdw&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=4)
 5. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=5&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
 6. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=6&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
 7. [Video description](https://www.youtube.com/watch?v=jiSirqZIy5k&index=7&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk)
