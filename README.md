@@ -18,5 +18,11 @@ By following the video tutorials and building this app on your own you will lear
 * Design Patterns - these are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. In this tutorial I talk about the built in design patterns. You will build components using the Singelton and Delegate pattern. 
 * NSURLSession - use this to request data from the internet. In this case you will pass the city name to a service, and receieve the weather data. 
 
+#Videos 
+1. [Create a new project and setup storyboard](https://www.youtube.com/watch?v=VSDMxdsYHq8&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk) - Here you will create a project and add labels, and add some constraints fit the elements to the view. Then create IBOulets and IBActions for elements created in storyboard. 
+2. [Create an Alert action to input cityname](https://www.youtube.com/watch?v=jiSirqZIy5k&index=2&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). An alert controller displays a popup dialog box. In this video we add a text field and some buttons to this to allow the input of a city name. 
+
+
+
 
 
