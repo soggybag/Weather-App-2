@@ -26,6 +26,44 @@ By following the video tutorials and building this app on your own you will lear
 5. [Weather Struct](https://www.youtube.com/watch?v=dZqrhbfRvhc&index=5&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). The app needs a way to pass the weather data around. A struct works well for this.
 6. [OpenWeatherMap](https://www.youtube.com/watch?v=YPFrQkZpIKw&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=6). Take a quick tour of the openweathermap.org site, and look at their API. 
 7. [Authorizing the app for HTTP](https://www.youtube.com/watch?v=AoYTuhWZFqM&index=7&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Here we set the security options to allow the app to access HTTP data from OpenWeatherMap. 
+8. [Working with JSON and SwiftyJSON](https://www.youtube.com/watch?v=LvoUA0-kBqM&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=8). SwiftyJSON is a helper class that simplifies working with JSON. 
+9. [Collecting the data and sending it back to the Main thread](https://www.youtube.com/watch?v=LRtoLCwaIm0&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=9). Here we take a look at the data return as JSON, and how to access the pieces we need. 
+10. [Passing the city name to WeatherService](https://www.youtube.com/watch?v=-l17cRPSYUA&index=10&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Here you will make it possible to get the weather for any city.
+11. [Set the City name on the button](https://www.youtube.com/watch?v=MrVAv-Cv4Uo&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=11). Changing the text of the button to match the name of the city.
+12. [Working with Weather icons](https://www.youtube.com/watch?v=0EEk4ctTBZM&index=12&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Now it's time to display images matching the weather condition.
+13. [Working with other weather properties](https://www.youtube.com/watch?v=axn8wFtDPXE&index=13&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Here you will learn to expand the range of weather properties your app displays.
+14. [Using your App ID and response code from openweatherma.org](https://www.youtube.com/watch?v=F53lSSm4jWQ&index=14&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk). Looking at status codes and HTTP responses for possible errors.
+15. [Error messages from the weather service](https://www.youtube.com/watch?v=fbRWlYaq4Wo&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=15). Even when your app is working correctly, its still possible to get errors, your app needs to handle these.
+16. [Handling HTTP responses](https://www.youtube.com/watch?v=wtfy2dzaWT4&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=16). Even when the app is working well, there can be a problem with the internet connection.
+17. [JSON Status code](https://www.youtube.com/watch?v=9jR_ZrszuKs&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=17). Handling the status code in JSON.
+18. [Working with the status code in the app](https://www.youtube.com/watch?v=zdukON7HH4I&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=18).
+19. [Formatting numbers](https://www.youtube.com/watch?v=yWzT4BGIKmk&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk&index=19).You app needs to display numbers, and you need to format them to best display the information. NSNumberFormatter is tool for the job. 
+20. [Get the weather via GPS location](https://www.youtube.com/watch?v=_jWz7bbVDxY&index=20&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk).We can also get the weather by using the phones GPS location.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
