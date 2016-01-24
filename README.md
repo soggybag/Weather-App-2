@@ -1,10 +1,10 @@
 # Weather-App Xcode 7 Swift 2
 
-This is a simple weather app that displays weather data from [OpenWeatherMap.org](http://openweathermap.org). These files 
+This is a simple app that displays weather data from [OpenWeatherMap.org](http://openweathermap.org). These files 
 follow the tutorial on youtube [here](http://openweathermap.org).
 
 The app also displays an image representing the weather condition along with the temperature, and any other information you 
-might want to include. 
+might want to include. I encourage you to build and expand on what is presented here. 
 
 #What you will learn
 
@@ -15,8 +15,11 @@ By following the video tutorials and building this app on your own you will lear
 * Swift Basics - Swift is a new Language introduced by Apple. This project is built entirely in Swift, and should provide a good introduction to it. 
 * Cocoa Touch - Cocoa Touch is the framework that underlies iOS. The framework is the code that creates all of the underlying systems that make it easy to add buttons, and images to the screen. 
 * ViewControllers - a view controller represents a screen of information. This is a fundemental building block of iOS development. 
-* Design Patterns - these are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. In this tutorial I talk about the built in design patterns. You will build components using the Singelton and Delegate pattern. 
+* Design Patterns - these are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. In this tutorial I talk about the built in design patterns. You will build components using the MVC and Delegate pattern. 
 * NSURLSession - use this to request data from the internet. In this case you will pass the city name to a service, and receieve the weather data. 
+* Formatting Numbers - Using NSNumberFormatter to format numeric values for their best display in oyur app. 
+* Erro handling - Making connections to services over the internet leaves plenty of opportunity for errors. You will learn how to handle different types of errors that might occur. 
+* Working with JSON - JSON is a standard format for passing data over an internet connection. You will learn how to load JSON formatted data.
 
 #Videos 
 1. [Create a new project and setup storyboard](https://www.youtube.com/watch?v=VSDMxdsYHq8&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk) - Here you will create a project and add labels, and add some constraints fit the elements to the view. Then create IBOulets and IBActions for elements created in storyboard. 
