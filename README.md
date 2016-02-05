@@ -1,21 +1,26 @@
 # Weather-App Xcode 7 Swift 2
 
-This is a simple app that displays weather data from [OpenWeatherMap.org](http://openweathermap.org). These files 
-follow the tutorial on youtube [here](http://openweathermap.org).
+This imple app displays weather data from [OpenWeatherMap.org](http://openweathermap.org). You can build this project yourself following the videos here on youtube [here](http://openweathermap.org).
 
-The app also displays an image representing the weather condition along with the temperature, and any other information you 
-might want to include. I encourage you to build and expand on what is presented here. 
+The app has the following features: 
+* Weather information for a city location.
+* Image representing the weather condition.
+* Current temperature 
+* Humidity
+* Wind speed
 
 #What you will learn
 
-By following the video tutorials and building this app on your own you will learn how to build a simple yet sophisticated app, that you can publish to the iTunes store. Techniques covered here are:
+By following the video tutorials and building this app on your own you will learn how to build a simple yet sophisticated app that you can publish to the iTunes store. 
+
+Techniques covered in these tutorials:
 
 * Storyboard, and auto layout - this is the system used to create the user interface in Xcode. 
-* IBOutlets and IBActions - these are the connections between elements created graphically in storyboard, and the code you write. 
-* Swift Basics - Swift is a new Language introduced by Apple. This project is built entirely in Swift, and should provide a good introduction to it. 
-* Cocoa Touch - Cocoa Touch is the framework that underlies iOS. The framework is the code that creates all of the underlying systems that make it easy to add buttons, and images to the screen. 
-* ViewControllers - a view controller represents a screen of information. This is a fundemental building block of iOS development. 
-* Design Patterns - these are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. In this tutorial I talk about the built in design patterns. You will build components using the MVC and Delegate pattern. 
+* IBOutlets and IBActions - these are the connections between elements created in storyboard and the code you write. 
+* Swift Basics - Swift is a new programming language created by Apple. This entire tutorial is written in Swift. 
+* Cocoa Touch - Cocoa Touch is the framework that underlies iOS. The framework is the code that creates all of the underlying systems. 
+* View Controllers - A view controller represents a screen of information. This is a fundemental building block of iOS development. 
+* Design Patterns - These are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. This tutorial talks about some of the design patterns user in Cocoa Touch. You will build components using the MVC and Delegate pattern. 
 * NSURLSession - use this to request data from the internet. In this case you will pass the city name to a service, and receieve the weather data. 
 * Formatting Numbers - Using NSNumberFormatter to format numeric values for their best display in oyur app. 
 * Erro handling - Making connections to services over the internet leaves plenty of opportunity for errors. You will learn how to handle different types of errors that might occur. 
