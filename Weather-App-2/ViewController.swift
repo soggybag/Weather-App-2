@@ -6,29 +6,36 @@
 //  Copyright © 2015 mitchell hudson. All rights reserved.
 //
 
+//  Last Update 020516
+
 // TODO: Clear initial screen, show button to load weather.
 // TODO: Save weather location in NSUserDefaults
 // TODO: Add SMS
 // TODO: Add email
 // TODO: Tweet Weather
-// TODO: Use Camera to set background Image
 // TODO: Email Image of Weather
 
 // Get location for weather
 
 import UIKit
+import Social
 import CoreLocation // 1 import CoreLocation
 
 // 4 Add Persmission Keys to info plist 
 // “NSLocationWhenInUseUsageDescription” or “NSLocationAlwaysUsageDescription”
 
 // 2 Add the delegate protocol
-class ViewController: UIViewController, CLLocationManagerDelegate, WeatherServiceDelegate {
+class ViewController: UIViewController,
+CLLocationManagerDelegate,
+WeatherServiceDelegate,
+UIImagePickerControllerDelegate, // For image picker
+UINavigationControllerDelegate {   // For image picker
     
     // 3 Make a location manager
     let locationManager = CLLocationManager()
     // Make an instance of WeatherService with your OpenWeatherMap ID.
     var weatherService = WeatherService(appid: "2854c5771899ff92cd962dd7ad58e7b0")
+    var weather: Weather?
     
     
     
@@ -42,26 +49,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate, WeatherServic
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var cityButton: UIButton!
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     
     // MARK: IBActions
     
+    
+    // -- City Button
     @IBAction func cityButtonTapped(sender: AnyObject) {
         print("City button")
         openSetWeatherAlert()
     }
     
-    
-    
     func openSetWeatherAlert() {
         let alert = UIAlertController(title: "Get Weather", message: "Enter City, or use your location!", preferredStyle: .Alert)
+        
         let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
         let ok = UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction) -> Void in
-            
             let textField = alert.textFields![0]
             let city = textField.text
             self.weatherService.getWeatherForCity(city!)
         }
+        
         let location = UIAlertAction(title: "Use Location", style: .Default) { (action: UIAlertAction) -> Void in
             //
             self.getGPSLocation()
@@ -77,6 +87,79 @@ class ViewController: UIViewController, CLLocationManagerDelegate, WeatherServic
         
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    
+    // -- Photo Button
+    @IBAction func photoButtonTapped(sender: AnyObject) {
+        self.openPhotoPicker()
+    }
+    
+    func openPhotoPicker() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        // picker.sourceType = .Camera
+        self.presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        self.backgroundImageView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    @IBAction func shareButtonTapped(sender: AnyObject) {
+        // open sharing alert
+        // Tweet
+        // Email
+        // SMS
+        openSharingAlert()
+    }
+    
+    func openSharingAlert() {
+        let alert = UIAlertController(title: "Share the Weather", message: "", preferredStyle: .ActionSheet)
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let tweet = UIAlertAction(title: "Tweet", style: .Default) { (action: UIAlertAction) -> Void in
+            //
+            self.tweetWeather()
+        }
+        let email = UIAlertAction(title: "Email", style: .Default) { (action:UIAlertAction) -> Void in
+            // 
+            self.emailWeather()
+        }
+        let sms = UIAlertAction(title: "SMS", style: .Default) { (action: UIAlertAction) -> Void in
+            // 
+            self.smsWeather()
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(tweet)
+        alert.addAction(email)
+        alert.addAction(sms)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func tweetWeather() {
+        print("Tweet the Weather")
+        // TODO: Format weather for Tweet
+        // TODO: Send Tweet
+        // TODO: Make Screenshot
+    }
+    
+    func emailWeather() {
+        print("Email the Weather")
+        // TODO: Format attributed text for email
+        // TODO: Send Email
+        // TODO: Get screenshot
+    }
+    
+    func smsWeather() {
+        print("SMS the Weather")
+        // TOOD: Format weather as message 
+        // TODO: Send message
+    }
+    
     
     
     
@@ -130,6 +213,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, WeatherServic
         self.iconImageView.image = UIImage(named: weather.icon)
         print("icon:"+weather.icon)
         self.cityButton.setTitle(weather.cityName, forState: .Normal)
+        
+        self.weather = weather
+    }
+    
+    
+    
+    // MARK: Screenshot
+    
+    func takeScreenshot(theView: UIView) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(theView.bounds.size, true, 0.0)
+        theView.drawViewHierarchyInRect(theView.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
     }
     
     
@@ -152,7 +250,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate, WeatherServic
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
+
+extension UIView {
+    func takeScreenshot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0.0)
+        self.drawViewHierarchyInRect(self.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+}
+
+
+
+
 
