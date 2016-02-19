@@ -7,6 +7,10 @@
 //
 
 
+// TODO: Add an enum for error codes. 
+// TODO: Use an enum for weather icons.
+
+
 import UIKit
 import CoreLocation
 

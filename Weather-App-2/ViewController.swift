@@ -38,8 +38,6 @@ UINavigationControllerDelegate {   // For image picker
     var weather: Weather?
     
     
-    
-    
     // MARK: IBOutlets
     
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -54,12 +52,12 @@ UINavigationControllerDelegate {   // For image picker
     
     // MARK: IBActions
     
-    
     // -- City Button
     @IBAction func cityButtonTapped(sender: AnyObject) {
         print("City button")
         openSetWeatherAlert()
     }
+    
     
     func openSetWeatherAlert() {
         let alert = UIAlertController(title: "Get Weather", message: "Enter City, or use your location!", preferredStyle: .Alert)
