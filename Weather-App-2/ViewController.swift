@@ -26,10 +26,10 @@ import CoreLocation // 1 import CoreLocation
 
 // 2 Add the delegate protocol
 class ViewController: UIViewController,
-CLLocationManagerDelegate,
-WeatherServiceDelegate,
-UIImagePickerControllerDelegate, // For image picker
-UINavigationControllerDelegate {   // For image picker
+    CLLocationManagerDelegate,
+    WeatherServiceDelegate,
+    UIImagePickerControllerDelegate, // For image picker
+    UINavigationControllerDelegate {   // For image picker
     
     // 3 Make a location manager
     let locationManager = CLLocationManager()
@@ -46,18 +46,23 @@ UINavigationControllerDelegate {   // For image picker
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var cityButton: UIButton!
-    
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     
     // MARK: IBActions
     
     // -- City Button
+    
+    /** Handles taps on the City button */
+    
     @IBAction func cityButtonTapped(sender: AnyObject) {
         print("City button")
         openSetWeatherAlert()
     }
     
+    
+    
+    /** This method opens an alert dialog and asks for the city name, or location. */
     
     func openSetWeatherAlert() {
         let alert = UIAlertController(title: "Get Weather", message: "Enter City, or use your location!", preferredStyle: .Alert)
@@ -88,24 +93,27 @@ UINavigationControllerDelegate {   // For image picker
     
     
     // -- Photo Button
+    /** Opens the photo picker */
     @IBAction func photoButtonTapped(sender: AnyObject) {
         self.openPhotoPicker()
     }
     
+    /** Open a photo picker to add an image or take a photo */
     func openPhotoPicker() {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
-        // picker.sourceType = .Camera
+        picker.sourceType = .Camera
         self.presentViewController(picker, animated: true, completion: nil)
     }
     
+    /** Handles results from the photopicker. */
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         self.backgroundImageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
+    /** Use this button to share the weather on Twitter, Email, or SMS */
     @IBAction func shareButtonTapped(sender: AnyObject) {
         // open sharing alert
         // Tweet
@@ -114,6 +122,7 @@ UINavigationControllerDelegate {   // For image picker
         openSharingAlert()
     }
     
+    /** Opens an Actionsheet with sharing options. */
     func openSharingAlert() {
         let alert = UIAlertController(title: "Share the Weather", message: "", preferredStyle: .ActionSheet)
         let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
@@ -138,6 +147,7 @@ UINavigationControllerDelegate {   // For image picker
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    /** Use this method to Tweet the weather. */
     func tweetWeather() {
         print("Tweet the Weather")
         // TODO: Format weather for Tweet
@@ -145,6 +155,7 @@ UINavigationControllerDelegate {   // For image picker
         // TODO: Make Screenshot
     }
     
+    /** Use this method to Email the weather. */
     func emailWeather() {
         print("Email the Weather")
         // TODO: Format attributed text for email
@@ -152,6 +163,7 @@ UINavigationControllerDelegate {   // For image picker
         // TODO: Get screenshot
     }
     
+    /** Use this method to test message the weather. */
     func smsWeather() {
         print("SMS the Weather")
         // TOOD: Format weather as message 
@@ -162,13 +174,14 @@ UINavigationControllerDelegate {   // For image picker
     
     
     // MARK: Location 
-    
+    /** Get the GPS location.  */
     func getGPSLocation() {
         print("Starting location Manager")
         locationManager.startUpdatingLocation()
     }
     
     // 6 Add delegate methods
+    /** Handles callback from location manager. */
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         // Get weather for location
         print("Did update To Location")
@@ -176,7 +189,7 @@ UINavigationControllerDelegate {   // For image picker
         locationManager.stopUpdatingLocation()
     }
     
-    
+    /** Handles location updates. Use this to get the weather for the current location. */
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("Did update locations")
         print(locations)
@@ -184,7 +197,7 @@ UINavigationControllerDelegate {   // For image picker
         locationManager.stopUpdatingLocation()
     }
     
-    
+    /** Handle error messages from the location manager. */
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("location error \(error) \(error.userInfo)")
     }
@@ -193,7 +206,7 @@ UINavigationControllerDelegate {   // For image picker
     
     
     // MARK: WeatherService Delegate methods
-    
+    /** Handles error message from Weather Service instance. */
     func weatherErrorWithMessage(message: String) {
         let alert = UIAlertController(title: "Weather Service Error", message: message, preferredStyle: .Alert)
         let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -201,6 +214,7 @@ UINavigationControllerDelegate {   // For image picker
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    /**  */
     func setWeather(weather: Weather) {
         let numberFormatter = NSNumberFormatter()
         self.descriptionLabel.text = weather.description

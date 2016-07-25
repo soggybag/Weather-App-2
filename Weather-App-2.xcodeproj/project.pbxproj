@@ -44,7 +44,7 @@
 		7B139BB21BF65F7700F1D281 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherService.swift; path = ../WeatherService.swift; sourceTree = "<group>"; };
 		7B139BB41BF65FE200F1D281 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = ../Weather.swift; sourceTree = "<group>"; };
 		7B139BB61BF6639E00F1D281 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
-		7B139BB81BF6D79400F1D281 /* WeatherServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherServiceDelegate.swift; sourceTree = "<group>"; };
+		7B139BB81BF6D79400F1D281 /* WeatherServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherServiceDelegate.swift; path = ../WeatherServiceDelegate.swift; sourceTree = "<group>"; };
 		7B139BDF1BF8016B00F1D281 /* 01d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01d.png; sourceTree = "<group>"; };
 		7B139BE01BF8016B00F1D281 /* 01n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01n.png; sourceTree = "<group>"; };
 		7B139BE11BF8016B00F1D281 /* 02d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02d.png; sourceTree = "<group>"; };
@@ -114,7 +114,6 @@
 		7BFBFCD41BF5003900F72B29 = {
 			isa = PBXGroup;
 			children = (
-				7B139BB81BF6D79400F1D281 /* WeatherServiceDelegate.swift */,
 				7BFBFCDF1BF5003A00F72B29 /* Weather-App-2 */,
 				7BFBFCDE1BF5003A00F72B29 /* Products */,
 			);
@@ -133,6 +132,7 @@
 			children = (
 				7BFBFCE01BF5003A00F72B29 /* AppDelegate.swift */,
 				7BFBFCE21BF5003A00F72B29 /* ViewController.swift */,
+				7B139BB81BF6D79400F1D281 /* WeatherServiceDelegate.swift */,
 				7B139BB21BF65F7700F1D281 /* WeatherService.swift */,
 				7B139BB41BF65FE200F1D281 /* Weather.swift */,
 				7B139BB61BF6639E00F1D281 /* SwiftyJSON.swift */,
