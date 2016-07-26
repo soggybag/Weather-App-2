@@ -7,7 +7,22 @@
 //
 
 
-// 
+/* 
+ 
+ This struct creates an object that represents the weather for a city.
+ All of the properties here are values describing the weather with
+ couple points of interest.
+
+ icon, a string, holds the name of weather status. This names is supplied by OpenWeatherMap. 
+ For a list of possible values see Icon List: http://openweathermap.org/weather-conditions
+ 
+ temp, holds the temperature in Kelvin. 
+ tempF and tempC are computed properties that return temp in Farenheit, and Celsius. 
+ 
+ Note: tempMin, and tempMax are not as intersting as they sound, see the notes on these in 
+ the OpenWeatherMap API. 
+ 
+*/
 
 
 import Foundation
