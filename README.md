@@ -20,11 +20,18 @@ Techniques covered in these tutorials:
 * Swift Basics - Swift is a new programming language created by Apple. This entire tutorial is written in Swift. 
 * Cocoa Touch - Cocoa Touch is the framework that underlies iOS. The framework is the code that creates all of the underlying systems. 
 * View Controllers - A view controller represents a screen of information. This is a fundemental building block of iOS development. 
-* Design Patterns - These are ways of arranging code to solve problems and accomplish goals. The Cocoa Touch framework is built on design patterns. This tutorial talks about some of the design patterns user in Cocoa Touch. You will build components using the MVC and Delegate pattern. 
+* Design Patterns - These are ways of arranging code to solve problems and accomplish goals. This tutorial talks about some of the design patterns user in Cocoa Touch. You will build components using the MVC and Delegate pattern. 
 * NSURLSession - use this to request data from the internet. In this case you will pass the city name to a service, and receieve the weather data. 
 * Formatting Numbers - Using NSNumberFormatter to format numeric values for their best display in oyur app. 
-* Erro handling - Making connections to services over the internet leaves plenty of opportunity for errors. You will learn how to handle different types of errors that might occur. 
-* Working with JSON - JSON is a standard format for passing data over an internet connection. You will learn how to load JSON formatted data.
+* Error handling - Making connections to services over the internet leaves plenty of opportunity for errors. You will learn how to handle different types of errors that might occur. 
+* Working with JSON - JSON is a standard format for passing data over an internet connection. You will learn how to load JSON formatted data using SwiftyJSON.
+
+## Bonus! 
+
+These example files also include a bonus features for your exploration. This includes: 
+
+* CoreLocation
+* UIImagePickerController
 
 #Videos 
 1. [Create a new project and setup storyboard](https://www.youtube.com/watch?v=VSDMxdsYHq8&list=PLoN_ejT35AEjBQ33-L8h2IwG11amXssGk) - Here you will create a project and add labels, and add some constraints fit the elements to the view. Then create IBOulets and IBActions for elements created in storyboard. 
